@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="oyuncakciModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ADMIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ADI" Type="varchar" MaxLength="100" />
+          <Property Name="E-MAIL" Type="varchar" MaxLength="50" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+          <Property Name="SIFRE" Type="varchar" MaxLength="50" />
+          <Property Name="YETKI" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ALTKATEGORI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KATEGORIID" Type="int" />
+          <Property Name="ADI" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="BAGIS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="BAGISYAPILACAKYERLERID" Type="int" />
+          <Property Name="URUNID" Type="int" />
+        </EntityType>
+        <EntityType Name="BAGISYAPILACAKYERLER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ADI" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CANLIDESTEK">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="ADMINID" Type="int" Nullable="false" />
+          <Property Name="MESAJ" Type="varchar(max)" />
+          <Property Name="TARIH" Type="datetime" />
+          <Property Name="ONCEKIMESAJ" Type="int" />
+        </EntityType>
+        <EntityType Name="FAVORILER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="URUNID" Type="int" />
+        </EntityType>
+        <EntityType Name="FIYATIDUSUNCEHABERVER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="URUNID" Type="int" />
+        </EntityType>
+        <EntityType Name="INDIRIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MARKAID" Type="int" />
+          <Property Name="URUNID" Type="int" />
+          <Property Name="INDIRIMYUZDESI" Type="tinyint" />
+          <Property Name="BASLANGICTARIHI" Type="datetime" />
+          <Property Name="BITISTARIHI" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="INDIRIMKODLARI">
+          <Property Name="ID" Type="int" />
+          <Property Name="KOD" Type="varchar" MaxLength="15" />
+          <Property Name="INDIRIMKODLARI" Type="varchar" MaxLength="15" />
+        </EntityType>-->
+        <EntityType Name="KAMPANYADANHABERDAROL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="URUNID" Type="int" />
+          <Property Name="MARKAID" Type="int" />
+          <Property Name="INDIRIMID" Type="int" />
+        </EntityType>
+        <EntityType Name="KATEGORI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ADI" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="MARKA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ADI" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="SEPETIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="SEPETID" Type="int" />
+          <Property Name="URUN" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="SEPETLER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="TAMAMLANDIMI" Type="bit" />
+        </EntityType>
+        <EntityType Name="SIFREMIYENILE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="YENILEMEKODU" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SIPARISLERIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="URUNID" Type="int" />
+          <Property Name="SEPETLERID" Type="int" />
+        </EntityType>
+        <EntityType Name="SIPARISTAKIPTABLOSU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SIPARISLERIMID" Type="int" />
+          <Property Name="KARGOFIRMASI" Type="varchar" MaxLength="100" />
+          <Property Name="TAKIPNO" Type="int" />
+        </EntityType>
+        <EntityType Name="URUN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ALTKATEGORIID" Type="int" />
+          <Property Name="ADI" Type="varchar" MaxLength="100" />
+          <Property Name="MARKAID" Type="int" />
+          <Property Name="STOKSAYISI" Type="smallint" />
+          <Property Name="FIYAT" Type="money" />
+          <Property Name="YASARALIKID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ADİ" Type="varchar" MaxLength="50" />
+          <Property Name="SOYADİ" Type="varchar" MaxLength="50" />
+          <Property Name="E-MAİL" Type="varchar" MaxLength="50" />
+          <Property Name="SIFRE" Type="varchar" MaxLength="50" />
+          <Property Name="CINSIYET" Type="bit" Nullable="false" />
+          <Property Name="CEPTELNO" Type="char" MaxLength="15" />
+          <Property Name="MAILLISTESI" Type="bit" />
+          <Property Name="UYELIKSOZLESMESI" Type="bit" />
+          <Property Name="KISISELVERILERINKORUNMASI" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="YASARALIK">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="YASARALIK" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="YORUM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="YORUM" Type="varchar(max)" />
+          <Property Name="TARIH" Type="datetime" />
+          <Property Name="ONCEKIYORUM" Type="int" />
+          <Property Name="URUNID" Type="int" />
+        </EntityType>
+        <EntityContainer Name="oyuncakciModelStoreContainer">
+          <EntitySet Name="ADMIN" EntityType="Self.ADMIN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ALTKATEGORI" EntityType="Self.ALTKATEGORI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BAGIS" EntityType="Self.BAGIS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BAGISYAPILACAKYERLER" EntityType="Self.BAGISYAPILACAKYERLER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CANLIDESTEK" EntityType="Self.CANLIDESTEK" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FAVORILER" EntityType="Self.FAVORILER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FIYATIDUSUNCEHABERVER" EntityType="Self.FIYATIDUSUNCEHABERVER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INDIRIM" EntityType="Self.INDIRIM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KAMPANYADANHABERDAROL" EntityType="Self.KAMPANYADANHABERDAROL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KATEGORI" EntityType="Self.KATEGORI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MARKA" EntityType="Self.MARKA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SEPETIM" EntityType="Self.SEPETIM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SEPETLER" EntityType="Self.SEPETLER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SIFREMIYENILE" EntityType="Self.SIFREMIYENILE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SIPARISLERIM" EntityType="Self.SIPARISLERIM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SIPARISTAKIPTABLOSU" EntityType="Self.SIPARISTAKIPTABLOSU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="URUN" EntityType="Self.URUN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="YASARALIK" EntityType="Self.YASARALIK" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="YORUM" EntityType="Self.YORUM" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="oyuncakciModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="OyuncakciEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ADMIN" EntityType="oyuncakciModel.ADMIN" />
+          <EntitySet Name="ALTKATEGORI" EntityType="oyuncakciModel.ALTKATEGORI" />
+          <EntitySet Name="BAGIS" EntityType="oyuncakciModel.BAGIS" />
+          <EntitySet Name="BAGISYAPILACAKYERLER" EntityType="oyuncakciModel.BAGISYAPILACAKYERLER" />
+          <EntitySet Name="CANLIDESTEK" EntityType="oyuncakciModel.CANLIDESTEK" />
+          <EntitySet Name="FAVORILER" EntityType="oyuncakciModel.FAVORILER" />
+          <EntitySet Name="FIYATIDUSUNCEHABERVER" EntityType="oyuncakciModel.FIYATIDUSUNCEHABERVER" />
+          <EntitySet Name="INDIRIM" EntityType="oyuncakciModel.INDIRIM" />
+          <EntitySet Name="KAMPANYADANHABERDAROL" EntityType="oyuncakciModel.KAMPANYADANHABERDAROL" />
+          <EntitySet Name="KATEGORI" EntityType="oyuncakciModel.KATEGORI" />
+          <EntitySet Name="MARKA" EntityType="oyuncakciModel.MARKA" />
+          <EntitySet Name="SEPETIM" EntityType="oyuncakciModel.SEPETIM" />
+          <EntitySet Name="SEPETLER" EntityType="oyuncakciModel.SEPETLER" />
+          <EntitySet Name="SIFREMIYENILE" EntityType="oyuncakciModel.SIFREMIYENILE" />
+          <EntitySet Name="SIPARISLERIM" EntityType="oyuncakciModel.SIPARISLERIM" />
+          <EntitySet Name="SIPARISTAKIPTABLOSU" EntityType="oyuncakciModel.SIPARISTAKIPTABLOSU" />
+          <EntitySet Name="URUN" EntityType="oyuncakciModel.URUN" />
+          <EntitySet Name="USER" EntityType="oyuncakciModel.USER" />
+          <EntitySet Name="YASARALIK" EntityType="oyuncakciModel.YASARALIK" />
+          <EntitySet Name="YORUM" EntityType="oyuncakciModel.YORUM" />
+        </EntityContainer>
+        <EntityType Name="ADMIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="E_MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SIFRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="YETKI" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ALTKATEGORI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KATEGORIID" Type="Int32" />
+          <Property Name="ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BAGIS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="BAGISYAPILACAKYERLERID" Type="Int32" />
+          <Property Name="URUNID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="BAGISYAPILACAKYERLER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CANLIDESTEK">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="ADMINID" Type="Int32" Nullable="false" />
+          <Property Name="MESAJ" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="DateTime" Precision="3" />
+          <Property Name="ONCEKIMESAJ" Type="Int32" />
+        </EntityType>
+        <EntityType Name="FAVORILER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="URUNID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="FIYATIDUSUNCEHABERVER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="URUNID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="INDIRIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MARKAID" Type="Int32" />
+          <Property Name="URUNID" Type="Int32" />
+          <Property Name="INDIRIMYUZDESI" Type="Byte" />
+          <Property Name="BASLANGICTARIHI" Type="DateTime" Precision="3" />
+          <Property Name="BITISTARIHI" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="KAMPANYADANHABERDAROL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="URUNID" Type="Int32" />
+          <Property Name="MARKAID" Type="Int32" />
+          <Property Name="INDIRIMID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="KATEGORI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MARKA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SEPETIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="SEPETID" Type="Int32" />
+          <Property Name="URUN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SEPETLER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="TAMAMLANDIMI" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SIFREMIYENILE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="YENILEMEKODU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SIPARISLERIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="URUNID" Type="Int32" />
+          <Property Name="SEPETLERID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SIPARISTAKIPTABLOSU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SIPARISLERIMID" Type="Int32" />
+          <Property Name="KARGOFIRMASI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TAKIPNO" Type="Int32" />
+        </EntityType>
+        <EntityType Name="URUN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ALTKATEGORIID" Type="Int32" />
+          <Property Name="ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MARKAID" Type="Int32" />
+          <Property Name="STOKSAYISI" Type="Int16" />
+          <Property Name="FIYAT" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="YASARALIKID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ADİ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SOYADİ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="E_MAİL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SIFRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CINSIYET" Type="Boolean" Nullable="false" />
+          <Property Name="CEPTELNO" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="MAILLISTESI" Type="Boolean" />
+          <Property Name="UYELIKSOZLESMESI" Type="Boolean" />
+          <Property Name="KISISELVERILERINKORUNMASI" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="YASARALIK">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="YASARALIK1" Type="Byte" />
+        </EntityType>
+        <EntityType Name="YORUM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="YORUM1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="DateTime" Precision="3" />
+          <Property Name="ONCEKIYORUM" Type="Int32" />
+          <Property Name="URUNID" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="oyuncakciModelStoreContainer" CdmEntityContainer="OyuncakciEntities">
+          <EntitySetMapping Name="ADMIN">
+            <EntityTypeMapping TypeName="oyuncakciModel.ADMIN">
+              <MappingFragment StoreEntitySet="ADMIN">
+                <ScalarProperty Name="YETKI" ColumnName="YETKI" />
+                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="E_MAIL" ColumnName="E-MAIL" />
+                <ScalarProperty Name="ADI" ColumnName="ADI" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ALTKATEGORI">
+            <EntityTypeMapping TypeName="oyuncakciModel.ALTKATEGORI">
+              <MappingFragment StoreEntitySet="ALTKATEGORI">
+                <ScalarProperty Name="ADI" ColumnName="ADI" />
+                <ScalarProperty Name="KATEGORIID" ColumnName="KATEGORIID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BAGIS">
+            <EntityTypeMapping TypeName="oyuncakciModel.BAGIS">
+              <MappingFragment StoreEntitySet="BAGIS">
+                <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+                <ScalarProperty Name="BAGISYAPILACAKYERLERID" ColumnName="BAGISYAPILACAKYERLERID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BAGISYAPILACAKYERLER">
+            <EntityTypeMapping TypeName="oyuncakciModel.BAGISYAPILACAKYERLER">
+              <MappingFragment StoreEntitySet="BAGISYAPILACAKYERLER">
+                <ScalarProperty Name="ADI" ColumnName="ADI" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CANLIDESTEK">
+            <EntityTypeMapping TypeName="oyuncakciModel.CANLIDESTEK">
+              <MappingFragment StoreEntitySet="CANLIDESTEK">
+                <ScalarProperty Name="ONCEKIMESAJ" ColumnName="ONCEKIMESAJ" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="MESAJ" ColumnName="MESAJ" />
+                <ScalarProperty Name="ADMINID" ColumnName="ADMINID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAVORILER">
+            <EntityTypeMapping TypeName="oyuncakciModel.FAVORILER">
+              <MappingFragment StoreEntitySet="FAVORILER">
+                <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FIYATIDUSUNCEHABERVER">
+            <EntityTypeMapping TypeName="oyuncakciModel.FIYATIDUSUNCEHABERVER">
+              <MappingFragment StoreEntitySet="FIYATIDUSUNCEHABERVER">
+                <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INDIRIM">
+            <EntityTypeMapping TypeName="oyuncakciModel.INDIRIM">
+              <MappingFragment StoreEntitySet="INDIRIM">
+                <ScalarProperty Name="BITISTARIHI" ColumnName="BITISTARIHI" />
+                <ScalarProperty Name="BASLANGICTARIHI" ColumnName="BASLANGICTARIHI" />
+                <ScalarProperty Name="INDIRIMYUZDESI" ColumnName="INDIRIMYUZDESI" />
+                <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+                <ScalarProperty Name="MARKAID" ColumnName="MARKAID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KAMPANYADANHABERDAROL">
+            <EntityTypeMapping TypeName="oyuncakciModel.KAMPANYADANHABERDAROL">
+              <MappingFragment StoreEntitySet="KAMPANYADANHABERDAROL">
+                <ScalarProperty Name="INDIRIMID" ColumnName="INDIRIMID" />
+                <ScalarProperty Name="MARKAID" ColumnName="MARKAID" />
+                <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KATEGORI">
+            <EntityTypeMapping TypeName="oyuncakciModel.KATEGORI">
+              <MappingFragment StoreEntitySet="KATEGORI">
+                <ScalarProperty Name="ADI" ColumnName="ADI" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MARKA">
+            <EntityTypeMapping TypeName="oyuncakciModel.MARKA">
+              <MappingFragment StoreEntitySet="MARKA">
+                <ScalarProperty Name="ADI" ColumnName="ADI" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SEPETIM">
+            <EntityTypeMapping TypeName="oyuncakciModel.SEPETIM">
+              <MappingFragment StoreEntitySet="SEPETIM">
+                <ScalarProperty Name="URUN" ColumnName="URUN" />
+                <ScalarProperty Name="SEPETID" ColumnName="SEPETID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SEPETLER">
+            <EntityTypeMapping TypeName="oyuncakciModel.SEPETLER">
+              <MappingFragment StoreEntitySet="SEPETLER">
+                <ScalarProperty Name="TAMAMLANDIMI" ColumnName="TAMAMLANDIMI" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SIFREMIYENILE">
+            <EntityTypeMapping TypeName="oyuncakciModel.SIFREMIYENILE">
+              <MappingFragment StoreEntitySet="SIFREMIYENILE">
+                <ScalarProperty Name="YENILEMEKODU" ColumnName="YENILEMEKODU" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SIPARISLERIM">
+            <EntityTypeMapping TypeName="oyuncakciModel.SIPARISLERIM">
+              <MappingFragment StoreEntitySet="SIPARISLERIM">
+                <ScalarProperty Name="SEPETLERID" ColumnName="SEPETLERID" />
+                <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SIPARISTAKIPTABLOSU">
+            <EntityTypeMapping TypeName="oyuncakciModel.SIPARISTAKIPTABLOSU">
+              <MappingFragment StoreEntitySet="SIPARISTAKIPTABLOSU">
+                <ScalarProperty Name="TAKIPNO" ColumnName="TAKIPNO" />
+                <ScalarProperty Name="KARGOFIRMASI" ColumnName="KARGOFIRMASI" />
+                <ScalarProperty Name="SIPARISLERIMID" ColumnName="SIPARISLERIMID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="URUN">
+            <EntityTypeMapping TypeName="oyuncakciModel.URUN">
+              <MappingFragment StoreEntitySet="URUN">
+                <ScalarProperty Name="YASARALIKID" ColumnName="YASARALIKID" />
+                <ScalarProperty Name="FIYAT" ColumnName="FIYAT" />
+                <ScalarProperty Name="STOKSAYISI" ColumnName="STOKSAYISI" />
+                <ScalarProperty Name="MARKAID" ColumnName="MARKAID" />
+                <ScalarProperty Name="ADI" ColumnName="ADI" />
+                <ScalarProperty Name="ALTKATEGORIID" ColumnName="ALTKATEGORIID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USER">
+            <EntityTypeMapping TypeName="oyuncakciModel.USER">
+              <MappingFragment StoreEntitySet="USER">
+                <ScalarProperty Name="KISISELVERILERINKORUNMASI" ColumnName="KISISELVERILERINKORUNMASI" />
+                <ScalarProperty Name="UYELIKSOZLESMESI" ColumnName="UYELIKSOZLESMESI" />
+                <ScalarProperty Name="MAILLISTESI" ColumnName="MAILLISTESI" />
+                <ScalarProperty Name="CEPTELNO" ColumnName="CEPTELNO" />
+                <ScalarProperty Name="CINSIYET" ColumnName="CINSIYET" />
+                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+                <ScalarProperty Name="E_MAİL" ColumnName="E-MAİL" />
+                <ScalarProperty Name="SOYADİ" ColumnName="SOYADİ" />
+                <ScalarProperty Name="ADİ" ColumnName="ADİ" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="YASARALIK">
+            <EntityTypeMapping TypeName="oyuncakciModel.YASARALIK">
+              <MappingFragment StoreEntitySet="YASARALIK">
+                <ScalarProperty Name="YASARALIK1" ColumnName="YASARALIK" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="YORUM">
+            <EntityTypeMapping TypeName="oyuncakciModel.YORUM">
+              <MappingFragment StoreEntitySet="YORUM">
+                <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+                <ScalarProperty Name="ONCEKIYORUM" ColumnName="ONCEKIYORUM" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="YORUM1" ColumnName="YORUM" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

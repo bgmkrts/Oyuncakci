@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="oyuncakciModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="OyuncakciEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ADMIN" EntityType="oyuncakciModel.ADMIN" />
+    <EntitySet Name="ALTKATEGORI" EntityType="oyuncakciModel.ALTKATEGORI" />
+    <EntitySet Name="BAGIS" EntityType="oyuncakciModel.BAGIS" />
+    <EntitySet Name="BAGISYAPILACAKYERLER" EntityType="oyuncakciModel.BAGISYAPILACAKYERLER" />
+    <EntitySet Name="CANLIDESTEK" EntityType="oyuncakciModel.CANLIDESTEK" />
+    <EntitySet Name="FAVORILER" EntityType="oyuncakciModel.FAVORILER" />
+    <EntitySet Name="FIYATIDUSUNCEHABERVER" EntityType="oyuncakciModel.FIYATIDUSUNCEHABERVER" />
+    <EntitySet Name="INDIRIM" EntityType="oyuncakciModel.INDIRIM" />
+    <EntitySet Name="KAMPANYADANHABERDAROL" EntityType="oyuncakciModel.KAMPANYADANHABERDAROL" />
+    <EntitySet Name="KATEGORI" EntityType="oyuncakciModel.KATEGORI" />
+    <EntitySet Name="MARKA" EntityType="oyuncakciModel.MARKA" />
+    <EntitySet Name="SEPETIM" EntityType="oyuncakciModel.SEPETIM" />
+    <EntitySet Name="SEPETLER" EntityType="oyuncakciModel.SEPETLER" />
+    <EntitySet Name="SIFREMIYENILE" EntityType="oyuncakciModel.SIFREMIYENILE" />
+    <EntitySet Name="SIPARISLERIM" EntityType="oyuncakciModel.SIPARISLERIM" />
+    <EntitySet Name="SIPARISTAKIPTABLOSU" EntityType="oyuncakciModel.SIPARISTAKIPTABLOSU" />
+    <EntitySet Name="URUN" EntityType="oyuncakciModel.URUN" />
+    <EntitySet Name="USER" EntityType="oyuncakciModel.USER" />
+    <EntitySet Name="YASARALIK" EntityType="oyuncakciModel.YASARALIK" />
+    <EntitySet Name="YORUM" EntityType="oyuncakciModel.YORUM" />
+  </EntityContainer>
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="E_MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SIFRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="YETKI" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ALTKATEGORI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KATEGORIID" Type="Int32" />
+    <Property Name="ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BAGIS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" />
+    <Property Name="BAGISYAPILACAKYERLERID" Type="Int32" />
+    <Property Name="URUNID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BAGISYAPILACAKYERLER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CANLIDESTEK">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" />
+    <Property Name="ADMINID" Type="Int32" Nullable="false" />
+    <Property Name="MESAJ" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TARIH" Type="DateTime" Precision="3" />
+    <Property Name="ONCEKIMESAJ" Type="Int32" />
+  </EntityType>
+  <EntityType Name="FAVORILER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" />
+    <Property Name="URUNID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="FIYATIDUSUNCEHABERVER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" />
+    <Property Name="URUNID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="INDIRIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MARKAID" Type="Int32" />
+    <Property Name="URUNID" Type="Int32" />
+    <Property Name="INDIRIMYUZDESI" Type="Byte" />
+    <Property Name="BASLANGICTARIHI" Type="DateTime" Precision="3" />
+    <Property Name="BITISTARIHI" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="KAMPANYADANHABERDAROL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" />
+    <Property Name="URUNID" Type="Int32" />
+    <Property Name="MARKAID" Type="Int32" />
+    <Property Name="INDIRIMID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="KATEGORI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MARKA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SEPETIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" />
+    <Property Name="SEPETID" Type="Int32" />
+    <Property Name="URUN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SEPETLER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" />
+    <Property Name="TAMAMLANDIMI" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="SIFREMIYENILE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" />
+    <Property Name="YENILEMEKODU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SIPARISLERIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="URUNID" Type="Int32" />
+    <Property Name="SEPETLERID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SIPARISTAKIPTABLOSU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SIPARISLERIMID" Type="Int32" />
+    <Property Name="KARGOFIRMASI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TAKIPNO" Type="Int32" />
+  </EntityType>
+  <EntityType Name="URUN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ALTKATEGORIID" Type="Int32" />
+    <Property Name="ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MARKAID" Type="Int32" />
+    <Property Name="STOKSAYISI" Type="Int16" />
+    <Property Name="FIYAT" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="YASARALIKID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADİ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SOYADİ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="E_MAİL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SIFRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CINSIYET" Type="Boolean" Nullable="false" />
+    <Property Name="CEPTELNO" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="MAILLISTESI" Type="Boolean" />
+    <Property Name="UYELIKSOZLESMESI" Type="Boolean" />
+    <Property Name="KISISELVERILERINKORUNMASI" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="YASARALIK">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YASARALIK1" Type="Byte" />
+  </EntityType>
+  <EntityType Name="YORUM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" />
+    <Property Name="YORUM1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TARIH" Type="DateTime" Precision="3" />
+    <Property Name="ONCEKIYORUM" Type="Int32" />
+    <Property Name="URUNID" Type="Int32" />
+  </EntityType>
+</Schema>

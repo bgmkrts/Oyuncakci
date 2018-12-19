@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="oyuncakciModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADI" Type="varchar" MaxLength="100" />
+    <Property Name="E-MAIL" Type="varchar" MaxLength="50" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+    <Property Name="SIFRE" Type="varchar" MaxLength="50" />
+    <Property Name="YETKI" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ALTKATEGORI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KATEGORIID" Type="int" />
+    <Property Name="ADI" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="BAGIS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="int" />
+    <Property Name="BAGISYAPILACAKYERLERID" Type="int" />
+    <Property Name="URUNID" Type="int" />
+  </EntityType>
+  <EntityType Name="BAGISYAPILACAKYERLER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADI" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CANLIDESTEK">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="int" />
+    <Property Name="ADMINID" Type="int" Nullable="false" />
+    <Property Name="MESAJ" Type="varchar(max)" />
+    <Property Name="TARIH" Type="datetime" />
+    <Property Name="ONCEKIMESAJ" Type="int" />
+  </EntityType>
+  <EntityType Name="FAVORILER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="int" />
+    <Property Name="URUNID" Type="int" />
+  </EntityType>
+  <EntityType Name="FIYATIDUSUNCEHABERVER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="int" />
+    <Property Name="URUNID" Type="int" />
+  </EntityType>
+  <EntityType Name="INDIRIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MARKAID" Type="int" />
+    <Property Name="URUNID" Type="int" />
+    <Property Name="INDIRIMYUZDESI" Type="tinyint" />
+    <Property Name="BASLANGICTARIHI" Type="datetime" />
+    <Property Name="BITISTARIHI" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="INDIRIMKODLARI">
+          <Property Name="ID" Type="int" />
+          <Property Name="KOD" Type="varchar" MaxLength="15" />
+          <Property Name="INDIRIMKODLARI" Type="varchar" MaxLength="15" />
+        </EntityType>-->
+  <EntityType Name="KAMPANYADANHABERDAROL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="int" />
+    <Property Name="URUNID" Type="int" />
+    <Property Name="MARKAID" Type="int" />
+    <Property Name="INDIRIMID" Type="int" />
+  </EntityType>
+  <EntityType Name="KATEGORI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADI" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MARKA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADI" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SEPETIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="int" />
+    <Property Name="SEPETID" Type="int" />
+    <Property Name="URUN" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SEPETLER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="int" />
+    <Property Name="TAMAMLANDIMI" Type="bit" />
+  </EntityType>
+  <EntityType Name="SIFREMIYENILE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="int" />
+    <Property Name="YENILEMEKODU" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SIPARISLERIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="URUNID" Type="int" />
+    <Property Name="SEPETLERID" Type="int" />
+  </EntityType>
+  <EntityType Name="SIPARISTAKIPTABLOSU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SIPARISLERIMID" Type="int" />
+    <Property Name="KARGOFIRMASI" Type="varchar" MaxLength="100" />
+    <Property Name="TAKIPNO" Type="int" />
+  </EntityType>
+  <EntityType Name="URUN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ALTKATEGORIID" Type="int" />
+    <Property Name="ADI" Type="varchar" MaxLength="100" />
+    <Property Name="MARKAID" Type="int" />
+    <Property Name="STOKSAYISI" Type="smallint" />
+    <Property Name="FIYAT" Type="money" />
+    <Property Name="YASARALIKID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADİ" Type="varchar" MaxLength="50" />
+    <Property Name="SOYADİ" Type="varchar" MaxLength="50" />
+    <Property Name="E-MAİL" Type="varchar" MaxLength="50" />
+    <Property Name="SIFRE" Type="varchar" MaxLength="50" />
+    <Property Name="CINSIYET" Type="bit" Nullable="false" />
+    <Property Name="CEPTELNO" Type="char" MaxLength="15" />
+    <Property Name="MAILLISTESI" Type="bit" />
+    <Property Name="UYELIKSOZLESMESI" Type="bit" />
+    <Property Name="KISISELVERILERINKORUNMASI" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="YASARALIK">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YASARALIK" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="YORUM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="int" />
+    <Property Name="YORUM" Type="varchar(max)" />
+    <Property Name="TARIH" Type="datetime" />
+    <Property Name="ONCEKIYORUM" Type="int" />
+    <Property Name="URUNID" Type="int" />
+  </EntityType>
+  <EntityContainer Name="oyuncakciModelStoreContainer">
+    <EntitySet Name="ADMIN" EntityType="Self.ADMIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ALTKATEGORI" EntityType="Self.ALTKATEGORI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BAGIS" EntityType="Self.BAGIS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BAGISYAPILACAKYERLER" EntityType="Self.BAGISYAPILACAKYERLER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CANLIDESTEK" EntityType="Self.CANLIDESTEK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FAVORILER" EntityType="Self.FAVORILER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FIYATIDUSUNCEHABERVER" EntityType="Self.FIYATIDUSUNCEHABERVER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INDIRIM" EntityType="Self.INDIRIM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KAMPANYADANHABERDAROL" EntityType="Self.KAMPANYADANHABERDAROL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KATEGORI" EntityType="Self.KATEGORI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MARKA" EntityType="Self.MARKA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEPETIM" EntityType="Self.SEPETIM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEPETLER" EntityType="Self.SEPETLER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIFREMIYENILE" EntityType="Self.SIFREMIYENILE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPARISLERIM" EntityType="Self.SIPARISLERIM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIPARISTAKIPTABLOSU" EntityType="Self.SIPARISTAKIPTABLOSU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="URUN" EntityType="Self.URUN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="YASARALIK" EntityType="Self.YASARALIK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="YORUM" EntityType="Self.YORUM" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

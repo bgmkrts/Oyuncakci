@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c3224393f17b468aaef365ad5d9e3387" Name="Diagram1">
+        <EntityTypeShape EntityType="oyuncakciModel.ADMIN" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.ALTKATEGORI" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.BAGIS" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.BAGISYAPILACAKYERLER" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.CANLIDESTEK" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.FAVORILER" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.FIYATIDUSUNCEHABERVER" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.INDIRIM" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.KAMPANYADANHABERDAROL" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.KATEGORI" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.MARKA" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.SEPETIM" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.SEPETLER" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.SIFREMIYENILE" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.SIPARISLERIM" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.SIPARISTAKIPTABLOSU" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.URUN" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.USER" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.YASARALIK" Width="1.5" PointX="6.75" PointY="9.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.YORUM" Width="1.5" PointX="8.75" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

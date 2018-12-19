@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="oyuncakciModelStoreContainer" CdmEntityContainer="OyuncakciEntities">
+    <EntitySetMapping Name="ADMIN">
+      <EntityTypeMapping TypeName="oyuncakciModel.ADMIN">
+        <MappingFragment StoreEntitySet="ADMIN">
+          <ScalarProperty Name="YETKI" ColumnName="YETKI" />
+          <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="E_MAIL" ColumnName="E-MAIL" />
+          <ScalarProperty Name="ADI" ColumnName="ADI" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ALTKATEGORI">
+      <EntityTypeMapping TypeName="oyuncakciModel.ALTKATEGORI">
+        <MappingFragment StoreEntitySet="ALTKATEGORI">
+          <ScalarProperty Name="ADI" ColumnName="ADI" />
+          <ScalarProperty Name="KATEGORIID" ColumnName="KATEGORIID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BAGIS">
+      <EntityTypeMapping TypeName="oyuncakciModel.BAGIS">
+        <MappingFragment StoreEntitySet="BAGIS">
+          <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+          <ScalarProperty Name="BAGISYAPILACAKYERLERID" ColumnName="BAGISYAPILACAKYERLERID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BAGISYAPILACAKYERLER">
+      <EntityTypeMapping TypeName="oyuncakciModel.BAGISYAPILACAKYERLER">
+        <MappingFragment StoreEntitySet="BAGISYAPILACAKYERLER">
+          <ScalarProperty Name="ADI" ColumnName="ADI" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CANLIDESTEK">
+      <EntityTypeMapping TypeName="oyuncakciModel.CANLIDESTEK">
+        <MappingFragment StoreEntitySet="CANLIDESTEK">
+          <ScalarProperty Name="ONCEKIMESAJ" ColumnName="ONCEKIMESAJ" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="MESAJ" ColumnName="MESAJ" />
+          <ScalarProperty Name="ADMINID" ColumnName="ADMINID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAVORILER">
+      <EntityTypeMapping TypeName="oyuncakciModel.FAVORILER">
+        <MappingFragment StoreEntitySet="FAVORILER">
+          <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FIYATIDUSUNCEHABERVER">
+      <EntityTypeMapping TypeName="oyuncakciModel.FIYATIDUSUNCEHABERVER">
+        <MappingFragment StoreEntitySet="FIYATIDUSUNCEHABERVER">
+          <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INDIRIM">
+      <EntityTypeMapping TypeName="oyuncakciModel.INDIRIM">
+        <MappingFragment StoreEntitySet="INDIRIM">
+          <ScalarProperty Name="BITISTARIHI" ColumnName="BITISTARIHI" />
+          <ScalarProperty Name="BASLANGICTARIHI" ColumnName="BASLANGICTARIHI" />
+          <ScalarProperty Name="INDIRIMYUZDESI" ColumnName="INDIRIMYUZDESI" />
+          <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+          <ScalarProperty Name="MARKAID" ColumnName="MARKAID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KAMPANYADANHABERDAROL">
+      <EntityTypeMapping TypeName="oyuncakciModel.KAMPANYADANHABERDAROL">
+        <MappingFragment StoreEntitySet="KAMPANYADANHABERDAROL">
+          <ScalarProperty Name="INDIRIMID" ColumnName="INDIRIMID" />
+          <ScalarProperty Name="MARKAID" ColumnName="MARKAID" />
+          <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KATEGORI">
+      <EntityTypeMapping TypeName="oyuncakciModel.KATEGORI">
+        <MappingFragment StoreEntitySet="KATEGORI">
+          <ScalarProperty Name="ADI" ColumnName="ADI" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MARKA">
+      <EntityTypeMapping TypeName="oyuncakciModel.MARKA">
+        <MappingFragment StoreEntitySet="MARKA">
+          <ScalarProperty Name="ADI" ColumnName="ADI" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEPETIM">
+      <EntityTypeMapping TypeName="oyuncakciModel.SEPETIM">
+        <MappingFragment StoreEntitySet="SEPETIM">
+          <ScalarProperty Name="URUN" ColumnName="URUN" />
+          <ScalarProperty Name="SEPETID" ColumnName="SEPETID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEPETLER">
+      <EntityTypeMapping TypeName="oyuncakciModel.SEPETLER">
+        <MappingFragment StoreEntitySet="SEPETLER">
+          <ScalarProperty Name="TAMAMLANDIMI" ColumnName="TAMAMLANDIMI" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIFREMIYENILE">
+      <EntityTypeMapping TypeName="oyuncakciModel.SIFREMIYENILE">
+        <MappingFragment StoreEntitySet="SIFREMIYENILE">
+          <ScalarProperty Name="YENILEMEKODU" ColumnName="YENILEMEKODU" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPARISLERIM">
+      <EntityTypeMapping TypeName="oyuncakciModel.SIPARISLERIM">
+        <MappingFragment StoreEntitySet="SIPARISLERIM">
+          <ScalarProperty Name="SEPETLERID" ColumnName="SEPETLERID" />
+          <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIPARISTAKIPTABLOSU">
+      <EntityTypeMapping TypeName="oyuncakciModel.SIPARISTAKIPTABLOSU">
+        <MappingFragment StoreEntitySet="SIPARISTAKIPTABLOSU">
+          <ScalarProperty Name="TAKIPNO" ColumnName="TAKIPNO" />
+          <ScalarProperty Name="KARGOFIRMASI" ColumnName="KARGOFIRMASI" />
+          <ScalarProperty Name="SIPARISLERIMID" ColumnName="SIPARISLERIMID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="URUN">
+      <EntityTypeMapping TypeName="oyuncakciModel.URUN">
+        <MappingFragment StoreEntitySet="URUN">
+          <ScalarProperty Name="YASARALIKID" ColumnName="YASARALIKID" />
+          <ScalarProperty Name="FIYAT" ColumnName="FIYAT" />
+          <ScalarProperty Name="STOKSAYISI" ColumnName="STOKSAYISI" />
+          <ScalarProperty Name="MARKAID" ColumnName="MARKAID" />
+          <ScalarProperty Name="ADI" ColumnName="ADI" />
+          <ScalarProperty Name="ALTKATEGORIID" ColumnName="ALTKATEGORIID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USER">
+      <EntityTypeMapping TypeName="oyuncakciModel.USER">
+        <MappingFragment StoreEntitySet="USER">
+          <ScalarProperty Name="KISISELVERILERINKORUNMASI" ColumnName="KISISELVERILERINKORUNMASI" />
+          <ScalarProperty Name="UYELIKSOZLESMESI" ColumnName="UYELIKSOZLESMESI" />
+          <ScalarProperty Name="MAILLISTESI" ColumnName="MAILLISTESI" />
+          <ScalarProperty Name="CEPTELNO" ColumnName="CEPTELNO" />
+          <ScalarProperty Name="CINSIYET" ColumnName="CINSIYET" />
+          <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+          <ScalarProperty Name="E_MAİL" ColumnName="E-MAİL" />
+          <ScalarProperty Name="SOYADİ" ColumnName="SOYADİ" />
+          <ScalarProperty Name="ADİ" ColumnName="ADİ" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YASARALIK">
+      <EntityTypeMapping TypeName="oyuncakciModel.YASARALIK">
+        <MappingFragment StoreEntitySet="YASARALIK">
+          <ScalarProperty Name="YASARALIK1" ColumnName="YASARALIK" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YORUM">
+      <EntityTypeMapping TypeName="oyuncakciModel.YORUM">
+        <MappingFragment StoreEntitySet="YORUM">
+          <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+          <ScalarProperty Name="ONCEKIYORUM" ColumnName="ONCEKIYORUM" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="YORUM1" ColumnName="YORUM" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

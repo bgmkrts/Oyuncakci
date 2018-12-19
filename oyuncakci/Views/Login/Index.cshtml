@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1">
+                <div class="login-form"><!--login form-->
+                    <h2>Hesabın ile giriş</h2>
+                    <form action="/Login/Giris">
+                        <input name="kl" type="email" placeholder="E mail" />
+                        <input name="sifre" type="password" placeholder="Sifre" />
+                        <span>
+                            <input type="checkbox" class="checkbox"> 
+                            Oturumumu açık tut
+                        </span>
+                        <button type="submit" class="btn btn-default">Giriş</button>
+                    </form>
+                    <a href="/Login/SifremiUnuttum">Sifremi Unuttum</a> | <a href="/Login/SifremiYenile">Sifremi Yenile</a>
+                </div><!--/login form-->
+            </div>
+            <div class="col-sm-1">
+                <h2 class="or">Veya</h2>
+            </div>
+            <div class="col-sm-4">
+                <div class="signup-form"><!--sign up form-->
+                    <h2>Kayıt Ol</h2>
+                    @using (Html.BeginForm("YeniUye", "Uyelik",FormMethod.Post))
+                    {
+                        <input type="text" name="ADI" placeholder="Kullanici adi" />
+                        <input type="email" name="E_MAİL" placeholder="Email " />
+                        <input type="password" name="SIFRE" placeholder="Şifre" />
+                        <button type="submit" class="btn btn-default">Kayıt ol</button>
+                    }
+                </div><!--/sign up form-->
+            </div>
+        </div>
+  

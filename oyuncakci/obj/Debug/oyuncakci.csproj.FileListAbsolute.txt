@@ -1,0 +1,142 @@
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\ApplicationInsights.config
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\csc.exe
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\vbc.exe
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\VBCSCompiler.exe
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\oyuncakci.dll.config
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\oyuncakci.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\oyuncakci.pdb
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.Web.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.ApplicationInsights.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Helpers.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Mvc.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Razor.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Webpages.Deployment.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Webpages.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Webpages.Razor.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.Web.xml
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.ApplicationInsights.xml
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Razor.xml
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Webpages.xml
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Webpages.Deployment.xml
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Webpages.Razor.xml
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Helpers.xml
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Mvc.xml
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\obj\Debug\oyuncakci.csprojResolveAssemblyReference.cache
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\obj\Debug\oyuncakci.dll
+C:\Users\begum\documents\visual studio 2015\Projects\oyuncakci\oyuncakci\obj\Debug\oyuncakci.pdb
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\ApplicationInsights.config
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\roslyn\csc.exe
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\roslyn\vbc.exe
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\roslyn\VBCSCompiler.exe
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\oyuncakci.dll.config
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\oyuncakci.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\oyuncakci.pdb
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.AI.Web.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.ApplicationInsights.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\System.Web.Helpers.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\System.Web.Mvc.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\System.Web.Razor.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\System.Web.Webpages.Deployment.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\System.Web.Webpages.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\System.Web.Webpages.Razor.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.AI.Web.xml
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.ApplicationInsights.xml
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\System.Web.Razor.xml
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\System.Web.Webpages.xml
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\System.Web.Webpages.Deployment.xml
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\System.Web.Webpages.Razor.xml
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\System.Web.Helpers.xml
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\bin\System.Web.Mvc.xml
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\obj\Debug\oyuncakci.csprojResolveAssemblyReference.cache
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\obj\Debug\oyuncakci.dll
+C:\Users\yunus\Desktop\oyuncakci\oyuncakci\obj\Debug\oyuncakci.pdb
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\ApplicationInsights.config
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\csc.exe
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\vbc.exe
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\VBCSCompiler.exe
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\oyuncakci.dll.config
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\oyuncakci.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\oyuncakci.pdb
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\EntityFramework.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\EntityFramework.SqlServer.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.Web.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.ApplicationInsights.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Helpers.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Mvc.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Razor.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Webpages.Deployment.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Webpages.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Webpages.Razor.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\EntityFramework.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\EntityFramework.SqlServer.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.Web.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.ApplicationInsights.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Razor.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Webpages.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Webpages.Deployment.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Webpages.Razor.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Helpers.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\bin\System.Web.Mvc.xml
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\obj\Debug\oyuncakci.csprojResolveAssemblyReference.cache
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\obj\Debug\oyuncakci.dll
+C:\Users\yunus\Documents\Visual Studio 2015\Projects\oyuncakci\oyuncakci\obj\Debug\oyuncakci.pdb
