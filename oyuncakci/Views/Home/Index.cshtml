@@ -119,13 +119,13 @@
                             <img src="~/Content/images/home/recommend1.jpg" alt=""/>
                             <h2>₺ @urn.FIYAT</h2>
                             <p>@urn.ADI</p>
-                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Sepete ekle</a>
+                            <a  onclick="SepetEkle(@urn.ID)" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Sepete ekle</a>
                         </div>
                         <div class="product-overlay">
                             <div class="overlay-content">
                                 <h2>₺ @urn.FIYAT</h2>
                                 <p>@urn.ADI</p>
-                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Sepete Ekle</a>
+                                <a onclick="SepetEkle(@urn.ID)" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Sepete Ekle</a>
                             </div>
                         </div>
                     </div>
@@ -206,7 +206,7 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="images/home/recommend2.jpg" alt="" />
+                                    <img src="images/home/recommend.jpg" alt="" />
                                     <h2>$56</h2>
                                     <p>Easy Polo Black Edition</p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>

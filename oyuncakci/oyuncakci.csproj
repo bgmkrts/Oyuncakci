@@ -253,9 +253,6 @@
     <Content Include="Views\Home\PopulerUrunler.cshtml" />
     <Content Include="Views\Home\CanliDestek.cshtml" />
     <Content Include="Views\Home\MarkaListesi.cshtml" />
-    <Content Include="Views\Sepet\SepeteEkle.cshtml" />
-    <Content Include="Views\Sepet\SepettenCikar.cshtml" />
-    <Content Include="Views\Sepet\SepetiBosalt.cshtml" />
     <Content Include="Views\Urun\Ayrinti.cshtml" />
     <Content Include="Views\Urun\FavoriEkle.cshtml" />
     <Content Include="Views\Urun\FavoriCikar.cshtml" />
@@ -393,6 +390,7 @@
     <Content Include="Views\Uyelik\Index.cshtml" />
     <Content Include="Views\Login\SifremiYenile.cshtml" />
     <Content Include="Views\Login\SifremiUnuttum.cshtml" />
+    <Content Include="Views\Sepet\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
