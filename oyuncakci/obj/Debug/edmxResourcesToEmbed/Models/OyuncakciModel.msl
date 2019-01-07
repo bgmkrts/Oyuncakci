@@ -114,7 +114,6 @@
         <MappingFragment StoreEntitySet="SEPETIM">
           <ScalarProperty Name="URUN" ColumnName="URUN" />
           <ScalarProperty Name="SEPETID" ColumnName="SEPETID" />
-          <ScalarProperty Name="USERID" ColumnName="USERID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

@@ -4,21 +4,52 @@
     Layout = "~/Views/Shared/_Layout_Admin.cshtml";
 }
 
-<h2>Index</h2>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
-<p>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 
-</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+
+
+<script src="~/Content/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<link href="~/Content/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" />
+ 
 <table class="table">
-    <tr>
-        <th></th>
-    </tr>
-
-    <tr>
-        <td>
-  
-        </td>
-    </tr>
-
-
+    <tbody id="liste"></tbody>
 </table>
+
+<script>
+    $(function () {
+    
+        $.ajax({
+            url: "/Admin/Siparisler",
+            type: "GET",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                var output = "";
+                for (var i in data.sepetler) {
+                   
+                    output += "<tr>" +
+                        "<td>" + data.sepetler[i].ADİ + "</td>" +
+                        "<td>" + data.sepetler[i].ADI + "</td>" +
+                        "</tr>";
+
+                    //" <option value='" + data.data[i].Id + "'>" + data.data[i].Marka1 + "</option>";
+                }
+                $('#liste').html(output);
+            },
+            error: function (result) {
+                $.alert({
+                    title: 'HATA!',
+                    content: 'Bir hata oluştu',
+                });
+                error.show;
+
+            }
+        });
+    });
+    
+
+</script>
