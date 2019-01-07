@@ -159,6 +159,7 @@
     <EntitySetMapping Name="URUN">
       <EntityTypeMapping TypeName="oyuncakciModel.URUN">
         <MappingFragment StoreEntitySet="URUN">
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
           <ScalarProperty Name="YASARALIKID" ColumnName="YASARALIKID" />
           <ScalarProperty Name="FIYAT" ColumnName="FIYAT" />
           <ScalarProperty Name="STOKSAYISI" ColumnName="STOKSAYISI" />

@@ -15,8 +15,7 @@ namespace oyuncakci.Models
     public partial class SEPETIM
     {
         public int ID { get; set; }
-        public Nullable<int> USERID { get; set; }
-        public Nullable<int> SEPETID { get; set; }
-        public string URUN { get; set; }
+        public int SEPETID { get; set; }
+        public int URUN { get; set; }
     }
 }

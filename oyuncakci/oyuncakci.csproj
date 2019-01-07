@@ -238,7 +238,6 @@
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Admin\Admin.cshtml" />
     <Content Include="Views\Uyelik\SifremiUnuttum.cshtml" />
     <Content Include="Views\Uyelik\YeniUyelik.cshtml" />
     <Content Include="Views\Uyelik\SifremiYenile.cshtml" />
@@ -319,6 +318,7 @@
     <Compile Include="Models\INDIRIM.cs">
       <DependentUpon>OyuncakciModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\JoinModel.cs" />
     <Compile Include="Models\KAMPANYADANHABERDAROL.cs">
       <DependentUpon>OyuncakciModel.tt</DependentUpon>
     </Compile>
@@ -391,6 +391,8 @@
     <Content Include="Views\Login\SifremiYenile.cshtml" />
     <Content Include="Views\Login\SifremiUnuttum.cshtml" />
     <Content Include="Views\Sepet\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout_Admin.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

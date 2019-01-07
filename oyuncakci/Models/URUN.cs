@@ -21,5 +21,6 @@ namespace oyuncakci.Models
         public Nullable<short> STOKSAYISI { get; set; }
         public Nullable<decimal> FIYAT { get; set; }
         public int YASARALIKID { get; set; }
+        public byte[] FOTO { get; set; }
     }
 }

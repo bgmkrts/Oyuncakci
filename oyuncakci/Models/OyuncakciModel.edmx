@@ -114,9 +114,8 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="USERID" Type="int" />
-          <Property Name="SEPETID" Type="int" />
-          <Property Name="URUN" Type="varchar" MaxLength="100" />
+          <Property Name="SEPETID" Type="int" Nullable="false" />
+          <Property Name="URUN" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="SEPETLER">
           <Key>
@@ -162,6 +161,7 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
           <Property Name="STOKSAYISI" Type="smallint" />
           <Property Name="FIYAT" Type="money" />
           <Property Name="YASARALIKID" Type="int" Nullable="false" />
+          <Property Name="FOTO" Type="image" />
         </EntityType>
         <EntityType Name="USER">
           <Key>
@@ -346,9 +346,8 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="USERID" Type="Int32" />
-          <Property Name="SEPETID" Type="Int32" />
-          <Property Name="URUN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SEPETID" Type="Int32" Nullable="false" />
+          <Property Name="URUN" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="SEPETLER">
           <Key>
@@ -394,6 +393,7 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
           <Property Name="STOKSAYISI" Type="Int16" />
           <Property Name="FIYAT" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="YASARALIKID" Type="Int32" Nullable="false" />
+          <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="USER">
           <Key>
@@ -428,7 +428,7 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
           <Property Name="ONCEKIYORUM" Type="Int32" />
           <Property Name="URUNID" Type="Int32" />
         </EntityType>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -547,7 +547,6 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
               <MappingFragment StoreEntitySet="SEPETIM">
                 <ScalarProperty Name="URUN" ColumnName="URUN" />
                 <ScalarProperty Name="SEPETID" ColumnName="SEPETID" />
-                <ScalarProperty Name="USERID" ColumnName="USERID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -592,6 +591,7 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
           <EntitySetMapping Name="URUN">
             <EntityTypeMapping TypeName="oyuncakciModel.URUN">
               <MappingFragment StoreEntitySet="URUN">
+                <ScalarProperty Name="FOTO" ColumnName="FOTO" />
                 <ScalarProperty Name="YASARALIKID" ColumnName="YASARALIKID" />
                 <ScalarProperty Name="FIYAT" ColumnName="FIYAT" />
                 <ScalarProperty Name="STOKSAYISI" ColumnName="STOKSAYISI" />

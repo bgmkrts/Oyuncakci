@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="oyuncakciModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="oyuncakciModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008">
   <EntityType Name="ADMIN">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ADI" Type="varchar" MaxLength="100" />
-    <Property Name="E-MAIL" Type="varchar" MaxLength="50" />
-    <Property Name="USERNAME" Type="varchar" MaxLength="50" />
-    <Property Name="SIFRE" Type="varchar" MaxLength="50" />
-    <Property Name="YETKI" Type="bit" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="ADI" MaxLength="100" Type="varchar" />
+    <Property Name="E-MAIL" MaxLength="50" Type="varchar" />
+    <Property Name="USERNAME" MaxLength="50" Type="varchar" />
+    <Property Name="SIFRE" MaxLength="50" Type="varchar" />
+    <Property Name="YETKI" Nullable="false" Type="bit" />
   </EntityType>
   <EntityType Name="ALTKATEGORI">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="KATEGORIID" Type="int" />
-    <Property Name="ADI" Type="varchar" MaxLength="100" />
+    <Property Name="ADI" MaxLength="100" Type="varchar" />
   </EntityType>
   <EntityType Name="BAGIS">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="USERID" Type="int" />
     <Property Name="BAGISYAPILACAKYERLERID" Type="int" />
     <Property Name="URUNID" Type="int" />
@@ -32,16 +32,16 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ADI" Type="varchar" MaxLength="100" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="ADI" MaxLength="100" Type="varchar" />
   </EntityType>
   <EntityType Name="CANLIDESTEK">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="USERID" Type="int" />
-    <Property Name="ADMINID" Type="int" Nullable="false" />
+    <Property Name="ADMINID" Nullable="false" Type="int" />
     <Property Name="MESAJ" Type="varchar(max)" />
     <Property Name="TARIH" Type="datetime" />
     <Property Name="ONCEKIMESAJ" Type="int" />
@@ -50,7 +50,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="USERID" Type="int" />
     <Property Name="URUNID" Type="int" />
   </EntityType>
@@ -58,7 +58,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="USERID" Type="int" />
     <Property Name="URUNID" Type="int" />
   </EntityType>
@@ -66,7 +66,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="MARKAID" Type="int" />
     <Property Name="URUNID" Type="int" />
     <Property Name="INDIRIMYUZDESI" Type="tinyint" />
@@ -84,7 +84,7 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="USERID" Type="int" />
     <Property Name="URUNID" Type="int" />
     <Property Name="MARKAID" Type="int" />
@@ -94,30 +94,30 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ADI" Type="varchar" MaxLength="100" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="ADI" MaxLength="100" Type="varchar" />
   </EntityType>
   <EntityType Name="MARKA">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ADI" Type="varchar" MaxLength="100" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="ADI" MaxLength="100" Type="varchar" />
   </EntityType>
   <EntityType Name="SEPETIM">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="USERID" Type="int" />
     <Property Name="SEPETID" Type="int" />
-    <Property Name="URUN" Type="varchar" MaxLength="100" />
+    <Property Name="URUN" Type="int" />
   </EntityType>
   <EntityType Name="SEPETLER">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="USERID" Type="int" />
     <Property Name="TAMAMLANDIMI" Type="bit" />
   </EntityType>
@@ -125,15 +125,15 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="USERID" Type="int" />
-    <Property Name="YENILEMEKODU" Type="varchar" MaxLength="50" />
+    <Property Name="YENILEMEKODU" MaxLength="50" Type="varchar" />
   </EntityType>
   <EntityType Name="SIPARISLERIM">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="URUNID" Type="int" />
     <Property Name="SEPETLERID" Type="int" />
   </EntityType>
@@ -141,50 +141,51 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="SIPARISLERIMID" Type="int" />
-    <Property Name="KARGOFIRMASI" Type="varchar" MaxLength="100" />
+    <Property Name="KARGOFIRMASI" MaxLength="100" Type="varchar" />
     <Property Name="TAKIPNO" Type="int" />
   </EntityType>
   <EntityType Name="URUN">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="ALTKATEGORIID" Type="int" />
-    <Property Name="ADI" Type="varchar" MaxLength="100" />
+    <Property Name="ADI" MaxLength="100" Type="varchar" />
     <Property Name="MARKAID" Type="int" />
     <Property Name="STOKSAYISI" Type="smallint" />
     <Property Name="FIYAT" Type="money" />
-    <Property Name="YASARALIKID" Type="int" Nullable="false" />
+    <Property Name="YASARALIKID" Nullable="false" Type="int" />
+    <Property Name="FOTO" Type="image" />
   </EntityType>
   <EntityType Name="USER">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ADİ" Type="varchar" MaxLength="50" />
-    <Property Name="SOYADİ" Type="varchar" MaxLength="50" />
-    <Property Name="E-MAİL" Type="varchar" MaxLength="50" />
-    <Property Name="SIFRE" Type="varchar" MaxLength="50" />
-    <Property Name="CINSIYET" Type="bit" Nullable="false" />
-    <Property Name="CEPTELNO" Type="char" MaxLength="15" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="ADİ" MaxLength="50" Type="varchar" />
+    <Property Name="SOYADİ" MaxLength="50" Type="varchar" />
+    <Property Name="E-MAİL" MaxLength="50" Type="varchar" />
+    <Property Name="SIFRE" MaxLength="50" Type="varchar" />
+    <Property Name="CINSIYET" Nullable="false" Type="bit" />
+    <Property Name="CEPTELNO" MaxLength="15" Type="char" />
     <Property Name="MAILLISTESI" Type="bit" />
     <Property Name="UYELIKSOZLESMESI" Type="bit" />
-    <Property Name="KISISELVERILERINKORUNMASI" Type="bit" Nullable="false" />
+    <Property Name="KISISELVERILERINKORUNMASI" Nullable="false" Type="bit" />
   </EntityType>
   <EntityType Name="YASARALIK">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="YASARALIK" Type="tinyint" />
   </EntityType>
   <EntityType Name="YORUM">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
     <Property Name="USERID" Type="int" />
     <Property Name="YORUM" Type="varchar(max)" />
     <Property Name="TARIH" Type="datetime" />
