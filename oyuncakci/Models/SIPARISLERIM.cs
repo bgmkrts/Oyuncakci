@@ -15,7 +15,9 @@ namespace oyuncakci.Models
     public partial class SIPARISLERIM
     {
         public int ID { get; set; }
-        public Nullable<int> URUNID { get; set; }
         public Nullable<int> SEPETLERID { get; set; }
+        public Nullable<System.DateTime> TARIH { get; set; }
+        public Nullable<bool> ONAYLANDIMI { get; set; }
+        public Nullable<bool> IPTAL { get; set; }
     }
 }

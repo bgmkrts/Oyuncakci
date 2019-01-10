@@ -45,9 +45,28 @@ namespace oyuncakci.Controllers
                         x.genel.sepet.sepet1.USERID,
                         x.genel.sepet.user.ADİ,
                         x.urunler.ADI
-                    }).ToList();
+                    }).GroupBy(x=> new {x.ADİ}).ToList();
 
-            return Json(new { success = true, sepetler = sepet }, JsonRequestBehavior.AllowGet);
+                return Json(new { success = true, sepetler = sepet }, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult SiparisOnayla(int id)
+        {
+            OyuncakciEntities db = new OyuncakciEntities();
+            var siparis = db.SIPARISLERIM.Find(id);
+            siparis.ONAYLANDIMI = true;
+            db.SaveChanges();
+            return Json(new { success = true, message = "İşlem başarılı" }, JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult SiparisIptal(int id)
+        {
+            OyuncakciEntities db = new OyuncakciEntities();
+            var siparis = db.SIPARISLERIM.Find(id);
+            siparis.IPTAL = true;
+            db.SaveChanges();
+            return Json(new { success = true, message = "İşlem başarılı" }, JsonRequestBehavior.AllowGet);
         }
     }
+
+
 }

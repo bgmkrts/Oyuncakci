@@ -138,8 +138,10 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="URUNID" Type="int" />
           <Property Name="SEPETLERID" Type="int" />
+          <Property Name="TARIH" Type="datetime" />
+          <Property Name="ONAYLANDIMI" Type="bit" />
+          <Property Name="IPTAL" Type="bit" />
         </EntityType>
         <EntityType Name="SIPARISTAKIPTABLOSU">
           <Key>
@@ -370,8 +372,10 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="URUNID" Type="Int32" />
           <Property Name="SEPETLERID" Type="Int32" />
+          <Property Name="TARIH" Type="DateTime" Precision="3" />
+          <Property Name="ONAYLANDIMI" Type="Boolean" />
+          <Property Name="IPTAL" Type="Boolean" />
         </EntityType>
         <EntityType Name="SIPARISTAKIPTABLOSU">
           <Key>
@@ -572,8 +576,10 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
           <EntitySetMapping Name="SIPARISLERIM">
             <EntityTypeMapping TypeName="oyuncakciModel.SIPARISLERIM">
               <MappingFragment StoreEntitySet="SIPARISLERIM">
+                <ScalarProperty Name="IPTAL" ColumnName="IPTAL" />
+                <ScalarProperty Name="ONAYLANDIMI" ColumnName="ONAYLANDIMI" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
                 <ScalarProperty Name="SEPETLERID" ColumnName="SEPETLERID" />
-                <ScalarProperty Name="URUNID" ColumnName="URUNID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

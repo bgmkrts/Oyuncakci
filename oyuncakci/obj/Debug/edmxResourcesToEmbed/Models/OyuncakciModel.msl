@@ -139,8 +139,10 @@
     <EntitySetMapping Name="SIPARISLERIM">
       <EntityTypeMapping TypeName="oyuncakciModel.SIPARISLERIM">
         <MappingFragment StoreEntitySet="SIPARISLERIM">
+          <ScalarProperty Name="IPTAL" ColumnName="IPTAL" />
+          <ScalarProperty Name="ONAYLANDIMI" ColumnName="ONAYLANDIMI" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
           <ScalarProperty Name="SEPETLERID" ColumnName="SEPETLERID" />
-          <ScalarProperty Name="URUNID" ColumnName="URUNID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

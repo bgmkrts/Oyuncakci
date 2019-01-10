@@ -148,8 +148,10 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="URUNID" Type="Int32" />
     <Property Name="SEPETLERID" Type="Int32" />
+    <Property Name="TARIH" Type="DateTime" Precision="3" />
+    <Property Name="ONAYLANDIMI" Type="Boolean" />
+    <Property Name="IPTAL" Type="Boolean" />
   </EntityType>
   <EntityType Name="SIPARISTAKIPTABLOSU">
     <Key>
