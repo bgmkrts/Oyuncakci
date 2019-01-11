@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace oyuncakci.Controllers
 {
+    using System.Data.Entity;
     using System.Web.Services.Description;
 
     using oyuncakci.Models;
@@ -23,31 +24,39 @@ namespace oyuncakci.Controllers
         {
             OyuncakciEntities db = new OyuncakciEntities();
 
-            var sepet = db.SEPETIM.Join(
-                db.SEPETLER.Join(
-                    db.USER,
-                    usr => usr.ID,
-                    sprs1 => sprs1.ID,
-                    (usr, sprs1) => new { user = sprs1, sepet1 = usr }),
-                spt => spt.SEPETID,
-                sprs => sprs.sepet1.ID,
-                (sprs, spt) => new { siparis = sprs, sepet = spt }).Join(
-                    db.URUN,
-                    urnid => urnid.siparis.URUN,
-                    urn => urn.ID,
-                    (urnid, urn) => new { genel = urnid, urunler = urn })
-                .Where(x => x.genel.sepet.sepet1.TAMAMLANDIMI != true).Select(
-                    x => new
-                    {
-                        x.genel.siparis.ID,
-                        x.genel.siparis.SEPETID,
-                        x.genel.siparis.URUN,
-                        x.genel.sepet.sepet1.USERID,
-                        x.genel.sepet.user.ADİ,
-                        x.urunler.ADI
-                    }).GroupBy(x=> new {x.ADİ}).ToList();
+           dynamic sepet = db.Database.SqlQuery<AdminSparisListe>("SELECT  SEPETIM.SEPETID, (USERS.ADİ+' '+USERS.SOYADİ) AS KULLANICI,COUNT(SEPETIM.URUN) AS ADET, SUM(URUN.FIYAT) AS TOPLAMFIYAT FROM SEPETIM "+
+          "  INNER JOIN SEPETLER ON SEPETLER.ID = SEPETIM.SEPETID"+
+           " INNER JOIN USERS ON USERS.ID = SEPETLER.USERID" +
+         "   INNER JOIN URUN ON URUN.ID = SEPETIM.URUN" +
+           " GROUP BY SEPETIM.SEPETID, USERS.ADİ, USERS.SOYADİ ORDER BY USERS.ADİ")
+                .ToList();
+         
 
-                return Json(new { success = true, sepetler = sepet }, JsonRequestBehavior.AllowGet);
+            //var sepet = db.SEPETIM.Join(
+            //db.SEPETLER.Join(
+            //    db.USERS,
+            //    usr => usr.ID,
+            //    sprs1 => sprs1.ID,
+            //    (usr, sprs1) => new { user = sprs1, sepet1 = usr }),
+            //spt => spt.SEPETID,
+            //sprs => sprs.sepet1.ID,
+            //(sprs, spt) => new { siparis = sprs, sepet = spt }).Join(
+            //    db.URUN,
+            //    urnid => urnid.siparis.URUN,
+            //    urn => urn.ID,
+            //    (urnid, urn) => new { genel = urnid, urunler = urn })
+            //.Where(x => x.genel.sepet.sepet1.TAMAMLANDIMI != true).Select(
+            //    x => new
+            //    {
+            //        x.genel.siparis.ID,
+            //        x.genel.siparis.SEPETID,
+            //        x.genel.siparis.URUN,
+            //        x.genel.sepet.sepet1.USERID,
+            //        x.genel.sepet.user.ADİ,
+            //        x.urunler.ADI
+            //    }).GroupBy(x => new { x.ADİ }).ToList();
+
+            return Json(new { success = true, sepetler = sepet }, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult SiparisOnayla(int id)

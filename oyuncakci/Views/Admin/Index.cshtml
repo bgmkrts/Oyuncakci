@@ -1,57 +1,87 @@
 ﻿
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
-}
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+    }
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
-<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 
 
-<script src="~/Content/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-<link href="~/Content/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" />
- 
-<table class="table">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+
+
+    <script src="~/Content/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <link href="~/Content/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" />
+
+<table class="table table-striped center-block">
+    <thead> 
+    <tr >
+        <th>Ayrıntı</th>
+        <th>Sepet Numarası</th>
+        <th>Kullanıcı Adı</th>
+        <th>Toplam Urun Sayısı</th>
+        <th> Toplam Fiyat</th>
+        <th>Onayla/İptal et</th>
+    </tr>
+    </thead>
     <tbody id="liste"></tbody>
 </table>
 
-<script>
-    $(function () {
-    
-        $.ajax({
-            url: "/Admin/Siparisler",
-            type: "GET",
-            dataType: "json",
-            contentType: "application/json; charset=utf-8",
-            success: function (data) {
-                alert(data.Key);
-                alert(data.Group[0].ADİ);
-                var output = "";
-                for (var i in data.sepetler) {
-                   
-                    output += "<tr>" +
-                        "<td>" + data.sepetler[i].ADİ + "</td>" +
-                        "<td>" + data.sepetler[i].Key[0].ADi + "</td>" +
-                        "</tr>";
+    <script>
+        $(function() {
 
-                    //" <option value='" + data.data[i].Id + "'>" + data.data[i].Marka1 + "</option>";
+            $.ajax({
+                url: "/Admin/Siparisler",
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function(data) {
+                    var output = "";
+                    for (var i in data.sepetler) {
+                        output += "<tr>" +
+                            "<td><a href='#' onclick='ayrinti' class='btn btn-info'><i class='fa fa-info'></i></a></td>" +
+                            "<td>" +
+                            data.sepetler[i].SEPETID +
+                            "</td>" +
+                            "<td>" +
+                            data.sepetler[i].KULLANICI +
+                            "</td>" +
+                            "<td>" +
+                            data.sepetler[i].ADET +
+                            "</td>" +
+                            "<td>" +
+                            data.sepetler[i].TOPLAMFIYAT +
+                            "₺</td>" +
+                            "<td>" +
+                            "<a href='#' class='btn btn-success'><i class='fa fa-check'></i></a> " +
+                            "<a href='#' class='btn btn-danger'><i class='fa fa-times'></i></a>" +
+                            "</td>" +
+                            "</tr>";
+
+                        //" <option value='" + data.data[i].Id + "'>" + data.data[i].Marka1 + "</option>";
+                    }
+                    $('#liste').html(output);
+                },
+                error: function(result) {
+                    alert("hata \n" + result);
+                    $.alert({
+                        title: 'HATA!',
+                        content: 'Bir hata oluştu',
+
+                    });
+                    error.show;
+
                 }
-                $('#liste').html(output);
-            },
-            error: function (result) {
-                $.alert({
-                    title: 'HATA!',
-                    content: 'Bir hata oluştu',
-                });
-                error.show;
-
-            }
+            });
         });
-    });
-    
 
-</script>
+        function ayrinti() {
+            $.alert({
+                title: 'HATA!',
+                content: 'Bir hata oluştu',
+
+            }); 
+        }
+    </script>

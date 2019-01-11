@@ -29,6 +29,12 @@ namespace oyuncakci.Models
         public DbSet<ALTKATEGORI> ALTKATEGORI { get; set; }
         public DbSet<BAGIS> BAGIS { get; set; }
         public DbSet<BAGISYAPILACAKYERLER> BAGISYAPILACAKYERLER { get; set; }
+
+        internal static DbContextTransaction BeginTransaction()
+        {
+            throw new NotImplementedException();
+        }
+
         public DbSet<CANLIDESTEK> CANLIDESTEK { get; set; }
         public DbSet<FAVORILER> FAVORILER { get; set; }
         public DbSet<FIYATIDUSUNCEHABERVER> FIYATIDUSUNCEHABERVER { get; set; }
@@ -42,7 +48,7 @@ namespace oyuncakci.Models
         public DbSet<SIPARISLERIM> SIPARISLERIM { get; set; }
         public DbSet<SIPARISTAKIPTABLOSU> SIPARISTAKIPTABLOSU { get; set; }
         public DbSet<URUN> URUN { get; set; }
-        public DbSet<USER> USER { get; set; }
+        public DbSet<USERS> USERS { get; set; }
         public DbSet<YASARALIK> YASARALIK { get; set; }
         public DbSet<YORUM> YORUM { get; set; }
     }

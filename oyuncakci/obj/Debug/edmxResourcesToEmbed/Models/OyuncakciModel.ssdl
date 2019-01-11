@@ -160,7 +160,7 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
     <Property Name="YASARALIKID" Type="int" Nullable="false" />
     <Property Name="FOTO" Type="image" />
   </EntityType>
-  <EntityType Name="USER">
+  <EntityType Name="USERS">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
@@ -211,7 +211,7 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
     <EntitySet Name="SIPARISLERIM" EntityType="Self.SIPARISLERIM" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SIPARISTAKIPTABLOSU" EntityType="Self.SIPARISTAKIPTABLOSU" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="URUN" EntityType="Self.URUN" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="YASARALIK" EntityType="Self.YASARALIK" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="YORUM" EntityType="Self.YORUM" Schema="dbo" store:Type="Tables" />
   </EntityContainer>

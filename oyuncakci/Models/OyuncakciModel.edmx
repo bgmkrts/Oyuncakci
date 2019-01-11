@@ -165,7 +165,7 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
           <Property Name="YASARALIKID" Type="int" Nullable="false" />
           <Property Name="FOTO" Type="image" />
         </EntityType>
-        <EntityType Name="USER">
+        <EntityType Name="USERS">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -216,7 +216,7 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
           <EntitySet Name="SIPARISLERIM" EntityType="Self.SIPARISLERIM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SIPARISTAKIPTABLOSU" EntityType="Self.SIPARISTAKIPTABLOSU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="URUN" EntityType="Self.URUN" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="YASARALIK" EntityType="Self.YASARALIK" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="YORUM" EntityType="Self.YORUM" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -242,7 +242,7 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
           <EntitySet Name="SIPARISLERIM" EntityType="oyuncakciModel.SIPARISLERIM" />
           <EntitySet Name="SIPARISTAKIPTABLOSU" EntityType="oyuncakciModel.SIPARISTAKIPTABLOSU" />
           <EntitySet Name="URUN" EntityType="oyuncakciModel.URUN" />
-          <EntitySet Name="USER" EntityType="oyuncakciModel.USER" />
+          <EntitySet Name="USERS" EntityType="oyuncakciModel.USERS" />
           <EntitySet Name="YASARALIK" EntityType="oyuncakciModel.YASARALIK" />
           <EntitySet Name="YORUM" EntityType="oyuncakciModel.YORUM" />
         </EntityContainer>
@@ -399,7 +399,7 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
           <Property Name="YASARALIKID" Type="Int32" Nullable="false" />
           <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <EntityType Name="USER">
+        <EntityType Name="USERS">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -608,9 +608,9 @@ warning 6013: The table/view 'oyuncakci.dbo.INDIRIMKODLARI' does not have a prim
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="USER">
-            <EntityTypeMapping TypeName="oyuncakciModel.USER">
-              <MappingFragment StoreEntitySet="USER">
+          <EntitySetMapping Name="USERS">
+            <EntityTypeMapping TypeName="oyuncakciModel.USERS">
+              <MappingFragment StoreEntitySet="USERS">
                 <ScalarProperty Name="KISISELVERILERINKORUNMASI" ColumnName="KISISELVERILERINKORUNMASI" />
                 <ScalarProperty Name="UYELIKSOZLESMESI" ColumnName="UYELIKSOZLESMESI" />
                 <ScalarProperty Name="MAILLISTESI" ColumnName="MAILLISTESI" />

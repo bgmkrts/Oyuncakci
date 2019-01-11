@@ -25,7 +25,7 @@ namespace oyuncakci.Controllers
         {
             OyuncakciEntities db = new OyuncakciEntities();
 
-            var model = db.USER.Where(x => x.E_MAİL.Equals(kl) && x.SIFRE.Equals(sifre)).FirstOrDefault();
+            var model = db.USERS.Where(x => x.E_MAİL.Equals(kl) && x.SIFRE.Equals(sifre)).FirstOrDefault();
             if (model != null)
             {
 
@@ -44,12 +44,12 @@ namespace oyuncakci.Controllers
         }
 
 
-        [HttpPost]
-        public async System.Threading.Tasks.Task<ActionResult> SifremiUnuttum(string email)
+        [HttpPost]// async System.Threading.Tasks.Task<ActionResult> 
+        public ActionResult SifremiUnuttum(string email)
         {
             OyuncakciEntities db = new OyuncakciEntities();
 
-            var model = db.USER.Where(x => x.E_MAİL.Equals(email)).FirstOrDefault();
+            var model = db.USERS.Where(x => x.E_MAİL.Equals(email)).FirstOrDefault();
             if (model != null)
             {
                 Random rnd = new Random();
@@ -103,14 +103,14 @@ namespace oyuncakci.Controllers
         public ActionResult SifremiYenile(string email,string sifre,string kod)
         {
 
-            var model = db.USER.Where(x => x.E_MAİL.Equals(email)).FirstOrDefault();
+            var model = db.USERS.Where(x => x.E_MAİL.Equals(email)).FirstOrDefault();
             if (model != null)
             {
                 var yenilemeKontrol = this.db.SIFREMIYENILE.FirstOrDefault(x => x.USERID == model.ID && x.YENILEMEKODU ==kod);
                 if (yenilemeKontrol != null)
                 {
-                    USER usr = new USER();
-                    usr = this.db.USER.Find(model.ID);
+                    USERS usr = new USERS();
+                    usr = this.db.USERS.Find(model.ID);
                     usr.SIFRE = sifre;
                     db.Entry(usr);
                     return RedirectToAction("Index", "Login"); // Şifre Değiştirme başarılı.

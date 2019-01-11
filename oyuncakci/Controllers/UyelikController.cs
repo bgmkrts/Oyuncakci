@@ -17,13 +17,13 @@ namespace oyuncakci.Controllers
         }
 
         [HttpPost]
-        public ActionResult YeniUye(USER usr)
+        public ActionResult YeniUye(USERS usr)
         {
             if (usr.ID == 0)
             {
                 using (OyuncakciEntities db = new OyuncakciEntities())
                 {
-                    db.USER.Add(usr);
+                    db.USERS.Add(usr);
                     db.SaveChanges();
                 }
 

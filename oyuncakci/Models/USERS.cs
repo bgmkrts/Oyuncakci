@@ -12,7 +12,7 @@ namespace oyuncakci.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class USER
+    public partial class USERS
     {
         public int ID { get; set; }
         public string ADİ { get; set; }

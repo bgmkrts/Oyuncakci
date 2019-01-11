@@ -22,7 +22,7 @@
         <EntityTypeShape EntityType="oyuncakciModel.SIPARISLERIM" Width="1.5" PointX="8.75" PointY="6.75" />
         <EntityTypeShape EntityType="oyuncakciModel.SIPARISTAKIPTABLOSU" Width="1.5" PointX="0.75" PointY="9.75" />
         <EntityTypeShape EntityType="oyuncakciModel.URUN" Width="1.5" PointX="2.75" PointY="9.75" />
-        <EntityTypeShape EntityType="oyuncakciModel.USER" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="oyuncakciModel.USERS" Width="1.5" PointX="4.75" PointY="9.75" />
         <EntityTypeShape EntityType="oyuncakciModel.YASARALIK" Width="1.5" PointX="6.75" PointY="9.75" />
         <EntityTypeShape EntityType="oyuncakciModel.YORUM" Width="1.5" PointX="8.75" PointY="9.75" />
       </Diagram>

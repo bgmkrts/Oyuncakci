@@ -171,9 +171,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="USER">
-      <EntityTypeMapping TypeName="oyuncakciModel.USER">
-        <MappingFragment StoreEntitySet="USER">
+    <EntitySetMapping Name="USERS">
+      <EntityTypeMapping TypeName="oyuncakciModel.USERS">
+        <MappingFragment StoreEntitySet="USERS">
           <ScalarProperty Name="KISISELVERILERINKORUNMASI" ColumnName="KISISELVERILERINKORUNMASI" />
           <ScalarProperty Name="UYELIKSOZLESMESI" ColumnName="UYELIKSOZLESMESI" />
           <ScalarProperty Name="MAILLISTESI" ColumnName="MAILLISTESI" />

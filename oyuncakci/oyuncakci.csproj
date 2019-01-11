@@ -297,6 +297,7 @@
     <Compile Include="Models\ADMIN.cs">
       <DependentUpon>OyuncakciModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\SepetListe.cs" />
     <Compile Include="Models\ALTKATEGORI.cs">
       <DependentUpon>OyuncakciModel.tt</DependentUpon>
     </Compile>
@@ -318,7 +319,7 @@
     <Compile Include="Models\INDIRIM.cs">
       <DependentUpon>OyuncakciModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\JoinModel.cs" />
+    <Compile Include="Models\AdminSparisListe.cs" />
     <Compile Include="Models\KAMPANYADANHABERDAROL.cs">
       <DependentUpon>OyuncakciModel.tt</DependentUpon>
     </Compile>
@@ -361,7 +362,7 @@
     <Compile Include="Models\URUN.cs">
       <DependentUpon>OyuncakciModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\USER.cs">
+    <Compile Include="Models\USERS.cs">
       <DependentUpon>OyuncakciModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\YASARALIK.cs">

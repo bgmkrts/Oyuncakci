@@ -18,7 +18,7 @@
     <EntitySet Name="SIPARISLERIM" EntityType="oyuncakciModel.SIPARISLERIM" />
     <EntitySet Name="SIPARISTAKIPTABLOSU" EntityType="oyuncakciModel.SIPARISTAKIPTABLOSU" />
     <EntitySet Name="URUN" EntityType="oyuncakciModel.URUN" />
-    <EntitySet Name="USER" EntityType="oyuncakciModel.USER" />
+    <EntitySet Name="USERS" EntityType="oyuncakciModel.USERS" />
     <EntitySet Name="YASARALIK" EntityType="oyuncakciModel.YASARALIK" />
     <EntitySet Name="YORUM" EntityType="oyuncakciModel.YORUM" />
   </EntityContainer>
@@ -175,7 +175,7 @@
     <Property Name="YASARALIKID" Type="Int32" Nullable="false" />
     <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
-  <EntityType Name="USER">
+  <EntityType Name="USERS">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
