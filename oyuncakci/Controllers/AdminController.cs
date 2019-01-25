@@ -24,13 +24,12 @@ namespace oyuncakci.Controllers
         {
             OyuncakciEntities db = new OyuncakciEntities();
 
-           dynamic sepet = db.Database.SqlQuery<AdminSparisListe>("SELECT  SEPETIM.SEPETID, (USERS.ADİ+' '+USERS.SOYADİ) AS KULLANICI,COUNT(SEPETIM.URUN) AS ADET, SUM(URUN.FIYAT) AS TOPLAMFIYAT FROM SEPETIM "+
-          "  INNER JOIN SEPETLER ON SEPETLER.ID = SEPETIM.SEPETID"+
-           " INNER JOIN USERS ON USERS.ID = SEPETLER.USERID" +
-         "   INNER JOIN URUN ON URUN.ID = SEPETIM.URUN" +
-           " GROUP BY SEPETIM.SEPETID, USERS.ADİ, USERS.SOYADİ ORDER BY USERS.ADİ")
-                .ToList();
-         
+            dynamic sepet = db.Database.SqlQuery<AdminSparisListe>("SELECT  SEPETIM.SEPETID, (USERS.ADİ+' '+USERS.SOYADİ) AS KULLANICI,COUNT(SEPETIM.URUN) AS ADET, SUM(URUN.FIYAT) AS TOPLAMFIYAT FROM SEPETIM " +
+            " INNER JOIN SEPETLER ON SEPETLER.ID = SEPETIM.SEPETID" +
+            " INNER JOIN USERS ON USERS.ID = SEPETLER.USERID" +
+            " INNER JOIN URUN ON URUN.ID = SEPETIM.URUN" +
+            " GROUP BY SEPETIM.SEPETID, USERS.ADİ, USERS.SOYADİ ORDER BY USERS.ADİ").ToList();
+
 
             //var sepet = db.SEPETIM.Join(
             //db.SEPETLER.Join(
