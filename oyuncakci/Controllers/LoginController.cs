@@ -21,11 +21,11 @@ namespace oyuncakci.Controllers
         }
 
         [HttpPost]
-        public ActionResult Giris(string kl, string sifre)
+        public ActionResult Giris(USERS usr)
         {
             OyuncakciEntities db = new OyuncakciEntities();
 
-            var model = db.USERS.Where(x => x.E_MAİL.Equals(kl) && x.SIFRE.Equals(sifre)).FirstOrDefault();
+            var model = db.USERS.Where(x => x.E_MAİL.Equals(usr.E_MAİL) && x.SIFRE.Equals(usr.SIFRE)).FirstOrDefault();
             if (model != null)
             {
 

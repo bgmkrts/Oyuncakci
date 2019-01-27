@@ -8,6 +8,7 @@ namespace oyuncakci.Models
     public class SepetListe
     {
         public int ID { get; set; }
+        public int NO { get; set; }
         public string ADI { get; set; }
         public int ADET { get; set; }
         public  System.Decimal BIRIMFIYAT { get; set; }

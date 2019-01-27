@@ -15,15 +15,19 @@ namespace oyuncakci.Controllers
         public ActionResult Index()
         {
             var model = this.db.SEPETIM.ToList();
-            var sepet = this.db.Database.SqlQuery<SepetListe>(
-                "select DISTINCT SEPETLER.ID, URUN.ADI, COUNT(URUN.ADI) AS ADET, URUN.FIYAT AS BIRIMFIYAT , SUM(URUN.FIYAT) AS TOLPLAMFIYAT from SEPETIM "
-                + " INNER JOIN SEPETLER ON SEPETIM.SEPETID = SEPETLER.ID" + " INNER JOIN URUN ON SEPETIM.URUN = URUN.ID"
-                + " where SEPETLER.USERID = "+1
-                + " GROUP BY SEPETLER.ID, URUN.ADI, URUN.ADI, URUN.FIYAT").ToList();
-            return Json(new { success = true, sepetler = sepet }, JsonRequestBehavior.AllowGet);
-            return View(model);
+       return View(model);
         }
 
+        public JsonResult GetData()
+        {
+          
+            var sepet = this.db.Database.SqlQuery<SepetListe>(
+                "select DISTINCT SEPETLER.ID,URUN.ID as No, URUN.ADI, COUNT(URUN.ADI) AS ADET, URUN.FIYAT AS BIRIMFIYAT , SUM(URUN.FIYAT) AS TOPLAMFIYAT from SEPETIM "
+                + " INNER JOIN SEPETLER ON SEPETIM.SEPETID = SEPETLER.ID" + " INNER JOIN URUN ON SEPETIM.URUN = URUN.ID"
+                + " where SEPETLER.USERID = " + 1
+                + " GROUP BY SEPETLER.ID, URUN.ID, URUN.ADI, URUN.FIYAT").ToList();
+            return Json(new { success = true, sepetler = sepet }, JsonRequestBehavior.AllowGet);
+        }
         [HttpPost]
         public ActionResult SepetEke(int id)
         {

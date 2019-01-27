@@ -13,9 +13,32 @@ namespace oyuncakci.Controllers
         // GET: Urun
         public ActionResult Index()
         {
-            return View();
+            OyuncakciEntities db = new OyuncakciEntities();
+            var model = db.URUN.ToList();
+            return View(model);
         }
 
+        public ActionResult Ayrinti(int id)
+        {
+            OyuncakciEntities db = new OyuncakciEntities();
+            var model = db.URUN.Find(id);
+            return this.View(model);
+        }
+        [HttpGet]
+        public ActionResult UrunEkleGuncelle(int id)
+        {
+            OyuncakciEntities db =new OyuncakciEntities();
+            if (id > 0)
+            {
+                var model = db.URUN.Find(id);
+                return View(model);
+            }
+            else
+            {
+                return View(new URUN());
+            }
+        }
+        [HttpPost]
         public JsonResult UrunEkleGuncelle(URUN urn)
         {
             OyuncakciEntities db = new OyuncakciEntities();

@@ -13,7 +13,9 @@ namespace oyuncakci.Controllers
         // GET: Kategori
         public ActionResult Index()
         {
-            return View();
+            OyuncakciEntities db = new OyuncakciEntities();
+            var model = db.KATEGORI.ToList();
+            return View(model);
         }
 
         public JsonResult KategoriListele()

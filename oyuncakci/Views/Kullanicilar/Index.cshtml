@@ -1,0 +1,80 @@
+﻿@model IEnumerable<oyuncakci.Models.USERS>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h1> Kullanıcılar</h1>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ADİ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SOYADİ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.E_MAİL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SIFRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CINSIYET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CEPTELNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAILLISTESI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UYELIKSOZLESMESI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KISISELVERILERINKORUNMASI)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADİ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SOYADİ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.E_MAİL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SIFRE)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.CINSIYET)*@
+            @if (item.CINSIYET) { <span>Bayan</span>}
+            else{ <span>Bay</span>}
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CEPTELNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAILLISTESI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UYELIKSOZLESMESI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KISISELVERILERINKORUNMASI)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+        </td>
+    </tr>
+}
+
+</table>

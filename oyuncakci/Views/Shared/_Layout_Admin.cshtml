@@ -21,50 +21,69 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/Content/images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Content/images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="~/Content/images/ico/apple-touch-icon-57-precomposed.png">
-
-
+    <link href="~/Content/admin.css" rel="stylesheet" />
+    <script src="~/Content/admin.js"></script>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-    <header id="header">
-        <!--header-->
-        <div class="header_top">
-            <!--header_top-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="contactinfo">
-                            <ul class="nav nav-pills">
-                                <li><a href="#"><i class="fa fa-phone"></i> 0(000) 000 00 00</a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i> info@oyuncakci.com</a></li>
-                            </ul>
-                        </div>
+<header id="header">
+ 
+    <!--header-->
+    <div class="header_top">
+        <!--header_top-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li><a href="#"><i class="fa fa-phone"></i> 0(000) 000 00 00</a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i> info@oyuncakci.com</a></li>
+                        </ul>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="social-icons pull-right">
-                            <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="social-icons pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div><!--/header_top-->
+        </div>
+    </div><!--/header_top-->
 
-        
-    </header><!--/header-->
+
+</header><!--/header-->
 
 
 
     <section>
-        <div class="container">
-            @RenderBody()
+        <div class="container row">
+            <div class="col-md-2">
+                <div id="jquery-accordion-menu" class="jquery-accordion-menu">
+                    <div class="jquery-accordion-menu-header">Oyuncakci Admin Panel </div>
+                    <ul>
+                        <li class="active"><a href="/Admin">Ana Sayfa </a></li>
+                        <li><a href="/Kategori">Kategori </a></li>
+                        <li><a href="/Urun">Ürünler </a></li>
+                        <li><a href="/Kullanicilar">Kullanicilar </a></li>
+                     </ul>
+                    @*<div class="jquery-accordion-menu-footer">Footer </div>*@
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="col-md-12" style="padding-left: 150px; padding-top: 50px">
+                    @RenderBody()
+            </div>
+            </div>
+           
+            
         </div>
     </section>
  

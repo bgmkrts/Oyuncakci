@@ -4,6 +4,16 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+
+
+<script src="~/Content/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<link href="~/Content/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" />
 
 <section id="cart_items">
     <div class="container">
@@ -25,40 +35,103 @@
                         <td></td>
                     </tr>
                 </thead>
-                <tbody>
-                @foreach (var i in Model)
-                {
-                    <tr>
-                        <td class="cart_product">
-                            <a href=""><img src="/Content/images/home/recommend1.jpg" width="50px" height="30px" alt=""></a>
-                        </td>
-                        <td class="cart_description">
-                            <h4><a href=""></a></h4>
-                            <p>Urun No: 1089772</p>
-                        </td>
-                        <td class="cart_price">
-                            <p>59₺</p>
-                        </td>
-                        <td class="cart_quantity">
-                            <div class="cart_quantity_button">
-                                <a class="cart_quantity_up" href=""> + </a>
-                                <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-                                <a class="cart_quantity_down" href=""> - </a>
-                            </div>
-                        </td>
-                        <td class="cart_total">
-                            <p class="cart_total_price">59₺</p>
-                        </td>
-                        <td class="cart_delete">
-                            <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
-                        </td>
-                    </tr> 
-                }
-
-                </tbody>
+                @*     @foreach (var i in Model)
+                    {
+                        <tr>
+                            <td class="cart_product">
+                                <a href=""><img src="/Content/images/home/recommend1.jpg" width="50px" height="30px" alt=""></a>
+                            </td>
+                            <td class="cart_description">
+                                <h4><a href=""></a></h4>
+                                <p>Urun No: 1089772</p>
+                            </td>
+                            <td class="cart_price">
+                                <p>59₺</p>
+                            </td>
+                            <td class="cart_quantity">
+                                <div class="cart_quantity_button">
+                                    <a class="cart_quantity_up" href=""> + </a>
+                                    <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+                                    <a class="cart_quantity_down" href=""> - </a>
+                                </div>
+                            </td>
+                            <td class="cart_total">
+                                <p class="cart_total_price">59₺</p>
+                            </td>
+                            <td class="cart_delete">
+                                <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                            </td>
+                        </tr>
+                    } *@
+                <tbody id="goster"></tbody>
             </table>
         </div>
     </div>
 </section> <!--/#cart_items-->
 
 
+<script>
+    $(function () {
+
+        $.ajax({
+            url: "/Sepet/GetData",
+            type: "GET",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                var output = "";
+                for (var i in data.sepetler) {
+                    //" + data.sepetler[i].ADI + "
+                    output += "<tr>" +
+                        "<td class='cart_product'><a href='#'><img  width='80px' height='50px' src='/Content/images/home/recommend1.jpg' alt='website template image'></a></td>" +
+                        "<td class='cart_description'><h4><a href='/Urun/Ayrinti/" + data.sepetler[i].NO + "'>" + data.sepetler[i].ADI + "</a></h4>" +
+                        "<p>Web ID: " + data.sepetler[i].NO + "</p></td>" +
+                        "<td class='cart_price'><p>" + data.sepetler[i].BIRIMFIYAT + "₺</p></td>" +
+                    "<td class='cart_quantity'><div class='cart_quantity_button'>"+
+                        "<input class='cart_quantity_input' type='text' name='quantity' value='" + data.sepetler[i].ADET + "' autocomplete='off' size='2'>" +
+                
+                        "<td class='cart_total'><p class='cart_total_price'>" + data.sepetler[i].TOPLAMFIYAT + "₺</p></td>" +
+                            "<td class='cart_delete'><a class='cart_quantity_delete' onclick='SepetKaldir(" + data.sepetler[i].NO + ")' href='#'><i class='fa fa-times'></i></a></td>" +
+                    "</tr>";
+                }
+                $('#goster').html(output);
+            },
+            error: function (result) {
+                alert("hata \n" + result);
+                $.alert({
+                    title: 'HATA!',
+                    content: 'Bir hata oluştu',
+                });
+                error.show;
+
+            }
+        });
+    });
+
+    function ayrinti() {
+        $.alert({
+            title: 'HATA!',
+            content: 'Bir hata oluştu',
+
+        });
+    }
+
+    function SepetKaldir(id) {
+        $.ajax({
+            url: '/Sepet/SepetKaldir/' + id,
+            dataType: 'json',
+            type: 'post',
+            contentType: 'application/json',
+            data: '',
+            processData: false,
+            success: function (sonuc) {
+                alert(sonuc.message);
+                // alert(sonuc.adet);
+                $("#sepetSayim").text("(" + sonuc.adet + ")");
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+                alert("Hata Oluştu");
+            }
+        });
+    }
+</script>

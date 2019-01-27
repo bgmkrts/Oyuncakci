@@ -1,0 +1,84 @@
+﻿@model IEnumerable<oyuncakci.Models.URUN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+<script src="~/Content/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<link href="~/Content/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+<h1>Ürünler</h1>
+
+<a class="btn btn-success" href="/Urun/UrunEkleGuncelle/0">Yeni ürün ekle</a>
+
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ADI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FIYAT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FIYAT)
+        </td>
+        <td>
+            <a class="btn btn-warning" href="/Urun/UrunEkleGuncelle/@item.ID">Düzenle</a>
+            <a class="btn btn-danger" onclick="urunSil(@item.ID)" href="#">Sil</a> 
+        </td>
+    </tr>
+}
+    <script>
+        function urunSil(id) {
+            var retVal = confirm("Silinsinmi ?");
+            if (retVal == true) {
+                $.ajax({
+                    url: "/Urun/UrunSil/" + id,
+                    type: "GET",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        alert(data.message);
+                    },
+                    error: function (result) {
+                        alert("hata \n" + result);
+                        $.alert({
+                            title: 'HATA!',
+                            content: 'hata' + result
+
+                        });
+                        error.show;
+
+                    }
+                });
+             
+                location.reload();
+            } else {
+               alert("iptal edildi");
+                return false;
+            }
+         
+        }
+
+        function ayrinti() {
+            $.alert({
+                title: 'HATA!',
+                content: 'Bir hata oluştu',
+
+            });
+        }
+    </script>
+</table>

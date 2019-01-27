@@ -1,0 +1,75 @@
+﻿@model IEnumerable<oyuncakci.Models.KATEGORI>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h1>Kategoriler</h1>
+
+<p>
+    <form action="/Kategori/KetegoriEkle" method="post">
+        <input type="text" class="form-control" name="adi" id="adi"/>
+        <input type="submit" value="Yeni kategori ekle"/>
+    </form>
+
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ADI)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADI)
+        </td>
+        <td>
+            <a class="btn btn-danger" onclick="urunSil(@item.ID)" href="#">Sil</a> 
+        </td>
+    </tr>
+}
+    <script>
+        function urunSil(id) {
+            var retVal = confirm("Silinsinmi ?");
+            if (retVal == true) {
+                $.ajax({
+                    url: "/Kategori/KetegoriSil/" + id,
+                    type: "GET",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        alert(data.message);
+                    },
+                    error: function (result) {
+                        alert("hata \n" + result);
+                        $.alert({
+                            title: 'HATA!',
+                            content: 'hata' + result
+
+                        });
+                        error.show;
+
+                    }
+                });
+             
+                location.reload();
+            } else {
+                alert("iptal edildi");
+                return false;
+            }
+         
+        }
+
+        function ayrinti() {
+            $.alert({
+                title: 'HATA!',
+                content: 'Bir hata oluştu',
+
+            });
+        }
+    </script>
+</table>
